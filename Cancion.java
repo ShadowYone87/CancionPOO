@@ -4,18 +4,13 @@ definir además dos constructores: uno vacío que inicializa el titulo y el auto
 vacías y otro que reciba como parámetros el titulo y el autor de la canción. Se deberán
 además definir los métodos getters y setters correspondientes.
  */
-
-import java.util.Scanner;
-
 public class Cancion {
     
-     String titulo;
-     String autor;
-
+     private String titulo;
+     private String autor;
     public Cancion() {
     }
-
-    public Cancion(int titulo, int autor) {
+    public Cancion(String titulo, String autor) {
         this.titulo = titulo;
         this.autor = autor;
     }
@@ -23,38 +18,18 @@ public class Cancion {
     public String getTitulo() {
         return titulo;
     }
-
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
     public String getAutor() {
         return autor;
     }
-
-    public void setTitulo(doucble titulo) {
-        this.titulo = titulo;
-    }
-
-    public void setAutor(double autor) {
+    public void setAutor(String autor) {
         this.autor = autor;
     }
-
     @Override
-    public Strings toString() {
-        return "Cancion " + "titulo=" + titulo + ", autor=" + autor;
+    public String toString() {
+        return "Cancion [titulo=" + titulo + ", autor=" + autor + "]";
     }
 
-    
-   
-    
-    public void crearCancion(){
-        Scanner leer=new Scanner(System.in);
-        
-        System.out.println("Ingrese el titulo de la cancion");
-        titulo=ler.nextDouble();
-        System.out.println("Ingrese el autor");
-        autor=ler.nextInt();
-       
-        
     }
-
-   
-   
-}
